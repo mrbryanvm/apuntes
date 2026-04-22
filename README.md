@@ -27,3 +27,13 @@ git config --global user.email "tucorreo@ejemplo.com"
 
 # Verificar la configuración
 git config --list
+
+
+## Clase 2: Estados y Commits
+
+[cite_start]Para entender cómo trabaja Git, es fundamental conocer el flujo de los archivos a través de sus tres estados principales antes de llegar a la nube[cite: 1, 3].
+
+### 1. Los tres estados de Git
+* **Directorio de Trabajo (Working Directory):** Es tu carpeta local donde creas o modificas código. [cite_start]Aquí los cambios aún no están "asegurados" por Git[cite: 5, 6].
+* [cite_start]**Área de Preparación (Staging Area):** Un área temporal donde seleccionas qué cambios específicos quieres incluir en tu siguiente punto de guardado[cite: 7, 8].
+* **Repositorio Local:** El historial confirmado. [cite_start]Aquí los cambios reciben un ID único (hash) y ya forman parte oficial de la historia del proyecto[cite: 9, 10].
