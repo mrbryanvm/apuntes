@@ -37,3 +37,8 @@ git config --list
 * **Directorio de Trabajo (Working Directory):** Es tu carpeta local donde creas o modificas código. [cite_start]Aquí los cambios aún no están "asegurados" por Git[cite: 5, 6].
 * [cite_start]**Área de Preparación (Staging Area):** Un área temporal donde seleccionas qué cambios específicos quieres incluir en tu siguiente punto de guardado[cite: 7, 8].
 * **Repositorio Local:** El historial confirmado. [cite_start]Aquí los cambios reciben un ID único (hash) y ya forman parte oficial de la historia del proyecto[cite: 9, 10].
+
+### 2. Directorio de Trabajo: Untracked vs Modified
+[cite_start]Git observa tu carpeta y cataloga los archivos en dos condiciones[cite: 19, 20]:
+* [cite_start]**Untracked (Sin seguimiento):** Archivos nuevos que Git ve pero de los que no tiene una versión previa[cite: 21].
+* [cite_start]**Modified (Modificado):** Archivos que Git ya conocía pero que han sufrido cambios, eliminaciones o renombrados[cite: 22].
