@@ -1,21 +1,35 @@
-# Trabajo Individual - Curso de Git
-**Nombre:** [Bryan Vasquez Maldonado]
-**Correo:** [bryan.vasquez.456@gmail.com]
+<div align="center">
+  <h1>Trabajo Individual - Curso de Git</h1>
+  <p><strong>Nombre:</strong> Bryan Vasquez Maldonado | <strong>Correo:</strong> bryan.vasquez.456@gmail.com</p>
+</div>
 
 ---
 
-## Clase 1: Introducción y Fundamentos de Git
+## 📚 Clase 1: Introducción y Fundamentos de Git
 
 En esta primera sesión se cubrieron los conceptos básicos de Git, su origen histórico y la configuración inicial del entorno de trabajo.
 
 ### 1. ¿Qué es Git?
-Git es un **sistema de control de versiones distribuido**. Su función principal es crear "puntos de guardado" (checkpoints) de los archivos de un proyecto para:
-* Mantener un historial de cambios.
-* Volver atrás en el tiempo en caso de errores.
-* Trabajar de forma colaborativa sin sobrescribir el trabajo de otros.
+
+> Git es un **sistema de control de versiones distribuido**. 
+
+Su función principal es crear "puntos de guardado" (checkpoints) de los archivos de un proyecto para:
+- 🗂️ Mantener un historial de cambios.
+- ⏪ Volver atrás en el tiempo en caso de errores.
+- 🤝 Trabajar de forma colaborativa sin sobrescribir el trabajo de otros.
+
+<!-- ESPACIO PARA IMAGEN 1: Te sugiero poner aquí un diagrama de cómo funciona un sistema distribuido o el logo oficial de Git -->
+<div align="center">
+  <img src="https://www.20i.com/blog/wp-content/uploads/2022/08/git-blog-header.png" alt="Diagrama de Git o Logo" width="500">
+  <br>
+  <em><small>Logo de git</small></em>
+</div>
 
 ### 2. Historia y Origen
-Git fue creado por **Linus Torvalds** en 2005. El motivo de su creación fue un conflicto con el software *BitKeeper* (que usaban para el Kernel de Linux). Tras perder el acceso gratuito, Linus decidió programar su propia herramienta de control de versiones en aproximadamente dos semanas, enfocándose en la velocidad, integridad de datos y soporte para flujos de trabajo no lineales.
+Git fue creado por **Linus Torvalds** en 2005. El motivo de su creación fue un conflicto con el software *BitKeeper* (que usaban para el Kernel de Linux). Tras perder el acceso gratuito, Linus decidió programar su propia herramienta de control de versiones en aproximadamente dos semanas, enfocándose en:
+- ⚡ Velocidad
+- 🔒 Integridad de datos
+- 🔀 Soporte para flujos de trabajo no lineales
 
 ### 3. Instalación y Configuración
 Durante la clase, realizamos la instalación en Windows y Linux. Los comandos esenciales de configuración global son:
@@ -27,60 +41,87 @@ git config --global user.email "tucorreo@ejemplo.com"
 
 # Verificar la configuración
 git config --list
+```
 
+---
 
-## Clase 2: Estados y Commits
+## ⚙️ Clase 2: Estados y Commits
 
-[cite_start]Para entender cómo trabaja Git, es fundamental conocer el flujo de los archivos a través de sus tres estados principales antes de llegar a la nube[cite: 1, 3].
+Para entender cómo trabaja Git, es fundamental conocer el flujo de los archivos a través de sus tres estados principales antes de llegar a la nube.
 
-### 1. Los tres estados de Git
-* **Directorio de Trabajo (Working Directory):** Es tu carpeta local donde creas o modificas código. [cite_start]Aquí los cambios aún no están "asegurados" por Git[cite: 5, 6].
-* [cite_start]**Área de Preparación (Staging Area):** Un área temporal donde seleccionas qué cambios específicos quieres incluir en tu siguiente punto de guardado[cite: 7, 8].
-* **Repositorio Local:** El historial confirmado. [cite_start]Aquí los cambios reciben un ID único (hash) y ya forman parte oficial de la historia del proyecto[cite: 9, 10].
+### 1. Los Tres Estados de Git
+
+- 📁 **Directorio de Trabajo (Working Directory):** Es tu carpeta local donde creas o modificas código. Aquí los cambios aún no están "asegurados" por Git.
+- 📝 **Área de Preparación (Staging Area):** Un área temporal donde seleccionas qué cambios específicos quieres incluir en tu siguiente punto de guardado.
+- 📦 **Repositorio Local:** El historial confirmado. Aquí los cambios reciben un ID único (hash) y ya forman parte oficial de la historia del proyecto.
+
+<!-- ESPACIO PARA IMAGEN 2: Aquí es ideal colocar un diagrama visual de los tres estados de Git (Working Directory -> Staging Area -> Local Repo) -->
+<div align="center">
+  <img src="https://miro.medium.com/1*diRLm1S5hkVoh5qeArND0Q@2x.png" alt="Flujo de los Tres Estados de Git" width="600">
+  <br>
+  <em><small>git flow</small></em>
+</div>
 
 ### 2. Directorio de Trabajo: Untracked vs Modified
-[cite_start]Git observa tu carpeta y cataloga los archivos en dos condiciones[cite: 19, 20]:
-* [cite_start]**Untracked (Sin seguimiento):** Archivos nuevos que Git ve pero de los que no tiene una versión previa[cite: 21].
-* [cite_start]**Modified (Modificado):** Archivos que Git ya conocía pero que han sufrido cambios, eliminaciones o renombrados[cite: 22].
 
-### 3. Recuperación de archivos
-[cite_start]Si cometemos un error en el directorio de trabajo y queremos volver al estado original del archivo, usamos[cite: 24, 25]:
-* `git restore <archivo>`: Borra físicamente lo que escribiste para regresar al último estado guardado. [cite_start]Se debe usar con precaución[cite: 27, 28].
+Git observa tu carpeta y cataloga los archivos en dos condiciones principales:
+- 🆕 **Untracked (Sin seguimiento):** Archivos nuevos que Git ve pero de los que no tiene una versión previa.
+- ✏️ **Modified (Modificado):** Archivos que Git ya conocía pero que han sufrido cambios, eliminaciones o han sido renombrados.
 
-### 4. Ignorar archivos con .gitignore
-[cite_start]No todo debe subirse al repositorio (ej. contraseñas, carpetas de dependencias como `node_modules` o archivos de configuración personal)[cite: 31, 61].
-[cite_start]Para ello, creamos un archivo llamado `.gitignore` y escribimos dentro los nombres o extensiones de archivos que queremos que Git ignore por completo[cite: 32, 40].
+### 3. Recuperación de Archivos
 
+Si cometemos un error en el directorio de trabajo y queremos volver al estado original del archivo, usamos:
+```bash
+git restore <archivo>
+```
+> ⚠️ **Atención:** Esto borra físicamente lo que escribiste para regresar al último estado guardado. Se debe usar con precaución.
 
+### 4. Ignorar Archivos con `.gitignore`
 
+No todo debe subirse al repositorio (ej. contraseñas, carpetas de dependencias como `node_modules` o archivos de configuración personal).
+Para evitarlo, creamos un archivo llamado `.gitignore` y escribimos dentro los nombres o extensiones de archivos que queremos que Git ignore por completo.
 
-### 5. Preparando cambios (Stage Area)
-[cite_start]Este estado intermedio nos permite ser selectivos con lo que guardamos[cite: 47, 48].
-* [cite_start]`git add <archivo>`: Agrega un archivo específico al stage[cite: 50].
-* [cite_start]`git add .`: Agrega todos los archivos modificados de la carpeta actual[cite: 50].
-* [cite_start]`git restore --staged <archivo>`: Saca un archivo del área de preparación para devolverlo al estado modificado (sin borrar el código)[cite: 51].
+### 5. Preparando Cambios (Stage Area)
 
-### 6. Confirmar cambios (Repositorio Local)
-[cite_start]Es la fase final donde los cambios en *staged* se graban en el historial[cite: 52, 55].
-* [cite_start]`git commit -m "mensaje"`: Crea el punto de guardado con una descripción[cite: 56].
-* [cite_start]`git reset --soft HEAD~1`: Deshace el último commit realizado, manteniendo tus cambios en el área de preparación por si necesitas corregir algo[cite: 57, 58].
+Este estado intermedio nos permite ser selectivos con lo que guardamos:
+- `git add <archivo>`: Agrega un archivo específico al stage.
+- `git add .`: Agrega todos los archivos modificados de la carpeta actual.
+- `git restore --staged <archivo>`: Saca un archivo del área de preparación para devolverlo al estado modificado (sin borrar el código).
 
+### 6. Confirmar Cambios (Repositorio Local)
+
+Es la fase final donde los cambios en *staged* se graban en el historial de manera oficial.
+- `git commit -m "mensaje"`: Crea el punto de guardado con una descripción.
+- `git reset --soft HEAD~1`: Deshace el último commit realizado, manteniendo tus cambios en el área de preparación por si necesitas corregir algo.
 
 ### 7. Buenas Prácticas: Commits Atómicos
-[cite_start]Un **commit atómico** es aquel que representa un único cambio lógico, pequeño y completo[cite: 74, 77].
-* [cite_start]Haz commits a menudo pero con sentido[cite: 78, 79].
-* [cite_start]No subas código que deje la aplicación sin funcionar[cite: 81].
-* [cite_start]Usa verbos imperativos: **Add, Change, Fix, Remove**[cite: 86].
-* [cite_start]No uses punto final ni puntos suspensivos en el mensaje del commit[cite: 91].
-* [cite_start]Mantén el título bajo los 50 caracteres para que sea conciso[cite: 100, 101].
+
+Un **commit atómico** es aquel que representa un único cambio lógico, pequeño y completo.
+
+- ✅ Haz commits a menudo pero con sentido.
+- ❌ No subas código que deje la aplicación sin funcionar.
+- ✍️ Usa verbos imperativos: **Add, Change, Fix, Remove**.
+- 🚫 No uses punto final ni puntos suspensivos en el mensaje del commit.
+- 📏 Mantén el título bajo los 50 caracteres para que sea conciso.
 
 ### 8. Commits Semánticos (Conventional Commits)
-[cite_start]Para que el historial sea legible, usamos el formato `<tipo>: <descripción>`[cite: 103, 105].
-* [cite_start]`feat`: Nueva característica[cite: 112].
-* [cite_start]`fix`: Solución de un error[cite: 113].
-* [cite_start]`docs`: Cambios en la documentación[cite: 117].
-* [cite_start]`style`: Cambios de formato (espacios, puntos y coma) que no afectan la lógica[cite: 119].
-* [cite_start]`refactor`: Cambio en el código que no corrige errores ni añade funciones (ej. renombrar variables)[cite: 118].
-* [cite_start]`test`: Añadir o corregir pruebas[cite: 120].
 
-[cite_start]Si se necesita más espacio, se deja una línea en blanco tras el título y se añade un **cuerpo** con todo el contexto necesario[cite: 124, 127].
+Para que el historial sea fácilmente legible, usamos el formato `<tipo>: <descripción>`.
+
+- ✨ **feat**: Nueva característica.
+- 🐛 **fix**: Solución de un error.
+- 📚 **docs**: Cambios en la documentación.
+- 💅 **style**: Cambios de formato (espacios, puntos y coma) que no afectan la lógica.
+- ♻️ **refactor**: Cambio en el código que no corrige errores ni añade funciones (ej. renombrar variables).
+- 🧪 **test**: Añadir o corregir pruebas.
+
+> 💡 **Tip:** Si se necesita más espacio, se deja una línea en blanco tras el título y se añade un **cuerpo** con todo el contexto necesario.
+
+<!-- ESPACIO PARA IMAGEN 3: Una captura de pantalla de un historial de commits limpios (usando git log o una interfaz gráfica como GitKraken/GitHub) mostrando commits semánticos -->
+<div align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*izVKF4AT1iDtv4fJO8oWWA.png" alt="Ejemplo de Commits Semánticos en el Historial" width="600">
+  <br>
+  <em><small>Git log</small></em>
+</div>
+
+---
