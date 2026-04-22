@@ -50,3 +50,12 @@ git config --list
 ### 4. Ignorar archivos con .gitignore
 [cite_start]No todo debe subirse al repositorio (ej. contraseñas, carpetas de dependencias como `node_modules` o archivos de configuración personal)[cite: 31, 61].
 [cite_start]Para ello, creamos un archivo llamado `.gitignore` y escribimos dentro los nombres o extensiones de archivos que queremos que Git ignore por completo[cite: 32, 40].
+
+
+
+
+### 5. Preparando cambios (Stage Area)
+[cite_start]Este estado intermedio nos permite ser selectivos con lo que guardamos[cite: 47, 48].
+* [cite_start]`git add <archivo>`: Agrega un archivo específico al stage[cite: 50].
+* [cite_start]`git add .`: Agrega todos los archivos modificados de la carpeta actual[cite: 50].
+* [cite_start]`git restore --staged <archivo>`: Saca un archivo del área de preparación para devolverlo al estado modificado (sin borrar el código)[cite: 51].
