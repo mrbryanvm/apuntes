@@ -73,3 +73,14 @@ git config --list
 * [cite_start]Usa verbos imperativos: **Add, Change, Fix, Remove**[cite: 86].
 * [cite_start]No uses punto final ni puntos suspensivos en el mensaje del commit[cite: 91].
 * [cite_start]Mantén el título bajo los 50 caracteres para que sea conciso[cite: 100, 101].
+
+### 8. Commits Semánticos (Conventional Commits)
+[cite_start]Para que el historial sea legible, usamos el formato `<tipo>: <descripción>`[cite: 103, 105].
+* [cite_start]`feat`: Nueva característica[cite: 112].
+* [cite_start]`fix`: Solución de un error[cite: 113].
+* [cite_start]`docs`: Cambios en la documentación[cite: 117].
+* [cite_start]`style`: Cambios de formato (espacios, puntos y coma) que no afectan la lógica[cite: 119].
+* [cite_start]`refactor`: Cambio en el código que no corrige errores ni añade funciones (ej. renombrar variables)[cite: 118].
+* [cite_start]`test`: Añadir o corregir pruebas[cite: 120].
+
+[cite_start]Si se necesita más espacio, se deja una línea en blanco tras el título y se añade un **cuerpo** con todo el contexto necesario[cite: 124, 127].
