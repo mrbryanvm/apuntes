@@ -46,3 +46,7 @@ git config --list
 ### 3. Recuperación de archivos
 [cite_start]Si cometemos un error en el directorio de trabajo y queremos volver al estado original del archivo, usamos[cite: 24, 25]:
 * `git restore <archivo>`: Borra físicamente lo que escribiste para regresar al último estado guardado. [cite_start]Se debe usar con precaución[cite: 27, 28].
+
+### 4. Ignorar archivos con .gitignore
+[cite_start]No todo debe subirse al repositorio (ej. contraseñas, carpetas de dependencias como `node_modules` o archivos de configuración personal)[cite: 31, 61].
+[cite_start]Para ello, creamos un archivo llamado `.gitignore` y escribimos dentro los nombres o extensiones de archivos que queremos que Git ignore por completo[cite: 32, 40].
