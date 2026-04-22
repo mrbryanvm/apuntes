@@ -42,3 +42,7 @@ git config --list
 [cite_start]Git observa tu carpeta y cataloga los archivos en dos condiciones[cite: 19, 20]:
 * [cite_start]**Untracked (Sin seguimiento):** Archivos nuevos que Git ve pero de los que no tiene una versión previa[cite: 21].
 * [cite_start]**Modified (Modificado):** Archivos que Git ya conocía pero que han sufrido cambios, eliminaciones o renombrados[cite: 22].
+
+### 3. Recuperación de archivos
+[cite_start]Si cometemos un error en el directorio de trabajo y queremos volver al estado original del archivo, usamos[cite: 24, 25]:
+* `git restore <archivo>`: Borra físicamente lo que escribiste para regresar al último estado guardado. [cite_start]Se debe usar con precaución[cite: 27, 28].
