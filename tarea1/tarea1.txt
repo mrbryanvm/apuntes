@@ -1,0 +1,10 @@
+#Trabajo individual
+Bryan Vasquez Maldonado
+#Clase 1
+#Qué es git
+Git es un sistema de control de versiones distribuido y gratuito, 
+diseñado para rastrear cambios en el código fuente durante el desarrollo
+ de software. Permite a múltiples desarrolladores trabajar simultáneamente, 
+gestionar el historial del proyecto, 
+recuperar versiones anteriores ("volver al pasado")
+ y colaborar eficientemente sin sobrescribir el trabajo ajeno.
