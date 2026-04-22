@@ -64,3 +64,12 @@ git config --list
 [cite_start]Es la fase final donde los cambios en *staged* se graban en el historial[cite: 52, 55].
 * [cite_start]`git commit -m "mensaje"`: Crea el punto de guardado con una descripción[cite: 56].
 * [cite_start]`git reset --soft HEAD~1`: Deshace el último commit realizado, manteniendo tus cambios en el área de preparación por si necesitas corregir algo[cite: 57, 58].
+
+
+### 7. Buenas Prácticas: Commits Atómicos
+[cite_start]Un **commit atómico** es aquel que representa un único cambio lógico, pequeño y completo[cite: 74, 77].
+* [cite_start]Haz commits a menudo pero con sentido[cite: 78, 79].
+* [cite_start]No subas código que deje la aplicación sin funcionar[cite: 81].
+* [cite_start]Usa verbos imperativos: **Add, Change, Fix, Remove**[cite: 86].
+* [cite_start]No uses punto final ni puntos suspensivos en el mensaje del commit[cite: 91].
+* [cite_start]Mantén el título bajo los 50 caracteres para que sea conciso[cite: 100, 101].
