@@ -59,3 +59,8 @@ git config --list
 * [cite_start]`git add <archivo>`: Agrega un archivo específico al stage[cite: 50].
 * [cite_start]`git add .`: Agrega todos los archivos modificados de la carpeta actual[cite: 50].
 * [cite_start]`git restore --staged <archivo>`: Saca un archivo del área de preparación para devolverlo al estado modificado (sin borrar el código)[cite: 51].
+
+### 6. Confirmar cambios (Repositorio Local)
+[cite_start]Es la fase final donde los cambios en *staged* se graban en el historial[cite: 52, 55].
+* [cite_start]`git commit -m "mensaje"`: Crea el punto de guardado con una descripción[cite: 56].
+* [cite_start]`git reset --soft HEAD~1`: Deshace el último commit realizado, manteniendo tus cambios en el área de preparación por si necesitas corregir algo[cite: 57, 58].
