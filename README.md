@@ -139,4 +139,27 @@ Es el error más común de los novatos. Aquí la diferencia clara:
 *   **Username:** Piénsalo bien; es permanente y es tu identidad como desarrollador.
 *   **Crear el Repo:** En GitHub, ve a "New repository". Usa el nombre de tu carpeta local, déjalo en público y **no añadas** README ni `.gitignore` si ya los tienes creados localmente.
 
+### 3. Configuración SSH (La Llave Maestra)
+Configurar SSH es vital para no tener que escribir tu usuario y contraseña cada vez que quieras subir cambios (`git push`).
+
+<div align="center">
+  <img src="https://i.ytimg.com/vi/iVJesFfzDGs/maxresdefault.jpg" alt="Configuración SSH GitHub" width="600">
+  <br>
+  <em><small>Configuración SSH GitHub</small></em>
+</div>
+
+**Pasos para generar la llave:**
+1. Abre la terminal (o Git Bash en Windows).
+2. Ejecuta el comando:
+   ```bash
+   ssh-keygen -t ed25519 -C "tu-correo@ejemplo.com"
 ---
+### 4. Conectando tu Repo Local al Remoto
+Una vez tengas el repositorio creado en GitHub, copia la URL de SSH y ejecuta estos comandos en tu carpeta local:
+```bash
+# 1. Vincula tu carpeta local con el link de GitHub
+git remote add origin git@github.com:tu-usuario/tu-repo.git
+# 2. Asegúrate de que tu rama principal se llame "main"
+git branch -M main
+# 3. Sube tus cambios por primera vez
+git push -u origin main
