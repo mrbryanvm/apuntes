@@ -212,3 +212,19 @@ Si estás usando tu segunda cuenta de GitHub para un proyecto, necesitas que los
 - **Local (`git config user.name`)**: Se ejecuta sin la palabra `--global` dentro de la carpeta de un proyecto específico.
 
 > 💡 **La regla de oro:** La configuración Local siempre le gana a la Global. Así evitas que un proyecto de trabajo salga con tu apodo de gamer de tu cuenta personal.
+
+### 4. git checkout: La Máquina del Tiempo
+
+Este comando te permite mirar el historial de tu proyecto como si viajaras al pasado.
+
+**¿Cómo viajar?**
+Haces un `git log --oneline`, copias el Hash (los numeritos amarillos de un commit antiguo) y escribes `git checkout <hash>`.
+
+**El estado "Detached HEAD" (Cabeza Desacoplada):**
+No te asustes con este término. "HEAD" es simplemente hacia dónde está mirando Git. Normalmente, HEAD apunta a la punta de una rama (como `main`). Si viajas al pasado a un commit específico, tu "cabeza" se suelta de la rama actual. Estás en modo "fantasma espectador".
+
+**Las Reglas del Viaje en el Tiempo:**
+
+- **Mira pero no toques:** Usa esto solo para ver código antiguo o recuperar un archivo borrado. Si haces un commit en este estado, se perderá en el limbo a menos que crees una rama nueva (`git checkout -b nueva_rama`).
+- **Piso limpio:** Git no te dejará viajar al pasado si tienes archivos modificados sin guardar (en rojo o verde). Haz commit antes de viajar.
+- **Regreso al futuro:** Para volver a la normalidad, simplemente escribe `git checkout main`.
