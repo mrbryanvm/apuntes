@@ -133,4 +133,10 @@ Es el error más común de los novatos. Aquí la diferencia clara:
 *   **Git:** Es la herramienta (el software) que gestiona tus commits y el historial de manera local en tu máquina.
 *   **GitHub:** Es la plataforma web (la nube) que aloja tus repositorios de Git y te permite trabajar en equipo.
 
+
+### 2. Creación de Cuenta y Repositorio
+*   **Cuenta Personal vs. Institucional:** Se recomienda usar una cuenta personal. La cuenta universitaria se pierde al graduarse, y con ella, todos tus proyectos.
+*   **Username:** Piénsalo bien; es permanente y es tu identidad como desarrollador.
+*   **Crear el Repo:** En GitHub, ve a "New repository". Usa el nombre de tu carpeta local, déjalo en público y **no añadas** README ni `.gitignore` si ya los tienes creados localmente.
+
 ---
