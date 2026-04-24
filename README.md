@@ -203,3 +203,12 @@ Host github-auxi            <-- El "apodo" que usarás al clonar
 **¿Cómo se usa en la práctica?**
 Si antes clonabas un repositorio así: `git clone git@github.com:usuario/repo.git`
 Ahora usas el "apodo" del Host que inventaste: `git clone git@github-auxi:usuario/repo.git`. La computadora lee `github-auxi`, va a tu archivo config, saca la llave correcta y te deja entrar sin pedir contraseñas.
+
+### 3. Configuración: Global vs. Local (Jerarquía)
+
+Si estás usando tu segunda cuenta de GitHub para un proyecto, necesitas que los commits salgan con ese nombre y correo, no con los de tu cuenta principal.
+
+- **Global (`git config --global user.name`)**: Aplica para toda la computadora. Es la configuración por defecto.
+- **Local (`git config user.name`)**: Se ejecuta sin la palabra `--global` dentro de la carpeta de un proyecto específico.
+
+> 💡 **La regla de oro:** La configuración Local siempre le gana a la Global. Así evitas que un proyecto de trabajo salga con tu apodo de gamer de tu cuenta personal.
