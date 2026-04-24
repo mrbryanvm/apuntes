@@ -178,3 +178,28 @@ Cuando usas el comando `git remote add origin <URL>`, le estás diciendo a Git: 
 
 - `git remote -v`: Te muestra exactamente a qué URLs está apuntando tu repositorio actual (tanto para subir `push` como para bajar `fetch` código).
 - `git remote set-url origin <NUEVA_URL>`: Cambia el objetivo del arquero. Se usa si te equivocaste y clonaste con HTTPS en lugar de SSH, o si quieres mandar tu código a un repositorio totalmente distinto.
+
+### 2. Múltiples Llaves SSH (El concepto "difícil")
+
+¿Por qué fue confuso? Porque el concepto de SSH ya es abstracto.
+La explicación simple: Una llave SSH es literalmente una llave digital. Cada cuenta de GitHub es como una casa diferente. Si tienes tu cuenta personal y una cuenta de la universidad/trabajo, necesitas dos llaves distintas (una para cada puerta).
+
+El problema es que, por defecto, tu computadora agarra la primera llave que encuentra e intenta abrir todas las puertas con esa. Para arreglarlo, debemos crear un "llavero" organizado (el archivo `config`).
+
+**Los pasos explicados:**
+
+- **Crear la segunda llave:** Usas el comando `ssh-keygen` pero le agregas la bandera `-f` para darle un nombre diferente (ej. `id_ed25519_auxi`), así no borra la llave de tu cuenta principal.
+
+- **El archivo config (El Llavero):** Entras a la carpeta oculta `.ssh` y creas un archivo llamado `config` (sin extensión). Adentro le dices a tu computadora cómo usar las llaves:
+
+```plaintext
+# Configuración para tu cuenta secundaria
+Host github-auxi            <-- El "apodo" que usarás al clonar
+  HostName github.com       <-- El servidor real de GitHub
+  User git                  <-- Siempre es 'git'
+  IdentityFile ~/.ssh/id_ed25519_auxi  <-- La ruta a tu SEGUNDA llave
+```
+
+**¿Cómo se usa en la práctica?**
+Si antes clonabas un repositorio así: `git clone git@github.com:usuario/repo.git`
+Ahora usas el "apodo" del Host que inventaste: `git clone git@github-auxi:usuario/repo.git`. La computadora lee `github-auxi`, va a tu archivo config, saca la llave correcta y te deja entrar sin pedir contraseñas.
