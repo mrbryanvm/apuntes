@@ -163,3 +163,18 @@ git remote add origin git@github.com:tu-usuario/tu-repo.git
 git branch -M main
 # 3. Sube tus cambios por primera vez
 git push -u origin main
+```
+
+## 🌐 Clase 4: Conexiones Remotas, SSH Múltiple y "Viajes en el Tiempo"
+
+### 1. git remote: El Arquero de Git
+
+Piensa en `git remote` como un arquero. Tu código está en tu computadora (el arco), pero necesitas decirle a Git hacia dónde debe disparar la flecha (la nube/GitHub).
+
+**¿Qué es el "Origin"?**
+Cuando usas el comando `git remote add origin <URL>`, le estás diciendo a Git: "Oye, esta URL larguísima de GitHub a partir de ahora se va a llamar origin". Es solo un apodo (alias) para no tener que escribir el link completo cada vez que subes código.
+
+**Comandos clave:**
+
+- `git remote -v`: Te muestra exactamente a qué URLs está apuntando tu repositorio actual (tanto para subir `push` como para bajar `fetch` código).
+- `git remote set-url origin <NUEVA_URL>`: Cambia el objetivo del arquero. Se usa si te equivocaste y clonaste con HTTPS en lugar de SSH, o si quieres mandar tu código a un repositorio totalmente distinto.
