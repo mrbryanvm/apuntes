@@ -124,4 +124,13 @@ Para que el historial sea fácilmente legible, usamos el formato `<tipo>: <descr
   <em><small>Git log</small></em>
 </div>
 
+## Clase 3: GitHub, Configuración SSH y Repositorios Remotos
+
+En esta sesión pasamos de la gestión local a la remota. El objetivo principal es conectar tu trabajo con GitHub para que sea accesible desde cualquier lugar y por cualquier persona (incluido el Auxiliar para calificarte).
+
+### 1. Git vs. GitHub: No son lo mismo
+Es el error más común de los novatos. Aquí la diferencia clara:
+*   **Git:** Es la herramienta (el software) que gestiona tus commits y el historial de manera local en tu máquina.
+*   **GitHub:** Es la plataforma web (la nube) que aloja tus repositorios de Git y te permite trabajar en equipo.
+
 ---
