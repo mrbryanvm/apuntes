@@ -228,3 +228,44 @@ No te asustes con este término. "HEAD" es simplemente hacia dónde está mirand
 - **Mira pero no toques:** Usa esto solo para ver código antiguo o recuperar un archivo borrado. Si haces un commit en este estado, se perderá en el limbo a menos que crees una rama nueva (`git checkout -b nueva_rama`).
 - **Piso limpio:** Git no te dejará viajar al pasado si tienes archivos modificados sin guardar (en rojo o verde). Haz commit antes de viajar.
 - **Regreso al futuro:** Para volver a la normalidad, simplemente escribe `git checkout main`.
+
+---
+
+## 🌿 Clase 5: Ramas (Branches) y Flujo de Trabajo
+
+### 1. El Tema Central: RAMAS (Branches)
+Las ramas son bifurcaciones del estado del código. Imagina que creas un camino paralelo para trabajar sin arruinar lo que ya funciona.
+
+**¿Para qué sirven?**
+- **Seguridad:** Tocas el código sin miedo a romper la versión principal.
+- **Trabajo en Equipo:** Cada integrante puede trabajar en su parte de forma aislada.
+- **Experimentación:** Puedes probar cosas locas y, si no funcionan, simplemente borras la rama.
+
+### 2. Comandos de Gestión:
+- `git branch`: Lista todas las ramas y te marca con un asterisco (`*`) en la que estás actualmente.
+- `git branch <nombre>`: Crea una nueva rama desde donde estás parado.
+- `git branch -D <nombre>`: Elimina una rama (úsalos con cuidado).
+- `git checkout <nombre>`: Te mueve a la rama especificada.
+- `git checkout -b <nombre>`: Comando "pro"; crea la rama y te cambia a ella de inmediato.
+- `git switch <nombre>`: Versión moderna y específica de `checkout` para cambiar de rama.
+- `git switch -c <nombre>`: Crea una rama y se cambia a ella (igual que `checkout -b`).
+
+### 3. 🌊 Flujo de Trabajo: GitFlow
+Para no hacer un "chiquero" de ramas, usamos un estándar. GitFlow define qué nombre y qué función tiene cada rama.
+
+**Tipos de Ramas en GitFlow:**
+- **Main (Producción):** Solo tiene el código que funciona al 100%. Generalmente empieza con el `initial commit`.
+- **Develop (Desarrollo):** El "campo de juego". Aquí se integran todas las nuevas funciones antes de pasar a `main`.
+- **Feature branches (feature/<nombre>):** Ramas temporales para crear una funcionalidad específica (ej: `feature/login`). Al terminar, se integran a `develop` y se borran.
+- **Release:** Ramas de prueba (QA) para pulir errores antes del lanzamiento oficial.
+- **Hotfix:** Arreglos de emergencia que se hacen directamente sobre el código de producción (`main`) cuando algo explota.
+
+### 4. 🤝 Colaboración en GitHub
+Para que tus amigos no solo miren tu código sino que también metan mano:
+
+1. Ve a tu repositorio en GitHub.
+2. Ve a **Settings** > **Collaborators**.
+3. Haz clic en el botón **Add People** e ingresa el *username* o correo de tu compañero.
+4. ⚠️ **Importante:** Tu compañero debe aceptar la invitación que le llegará por correo.
+
+> 💡 **Tip de la clase:** El comando `git log --oneline --graph --all` es tu mejor amigo para ver visualmente cómo se están cruzando y separando tus ramas.
