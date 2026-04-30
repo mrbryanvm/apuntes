@@ -269,3 +269,74 @@ Para que tus amigos no solo miren tu código sino que también metan mano:
 4. ⚠️ **Importante:** Tu compañero debe aceptar la invitación que le llegará por correo.
 
 > 💡 **Tip de la clase:** El comando `git log --oneline --graph --all` es tu mejor amigo para ver visualmente cómo se están cruzando y separando tus ramas.
+
+---
+
+## 🔀 Clase 6: Fusión y Sincronización (Merge, Fetch, Pull, Push)
+
+En esta sesión abordamos los comandos fundamentales para sincronizar nuestro repositorio local con el remoto y cómo integrar los cambios de diferentes ramas.
+
+### 1. ¿Qué es `git merge`?
+Merge significa **fusión**. Este comando nos permite fusionar nuestras ramas en una sola para que ambas compartan los commits y el historial de cambios.
+
+- **Flag `--no-ff` (No Fast Forward):** Al utilizar `git merge --no-ff <rama>`, Git fuerza la creación de un nuevo commit específico para la fusión. Esto es sumamente útil porque evita que se pierda el historial visual de las ramas, incluso si decides borrar la rama original después.
+
+### 2. ¿Qué es `git fetch`?
+Es el comando que permite verificar si hubo cambios en la rama remota y sus ramas hijas. Actúa como un radar: se comunica con GitHub (o tu servidor remoto) y te avisa si hay actualizaciones nuevas sin modificar tu código local.
+
+### 3. ¿Qué es `git pull`?
+El comando `git pull` permite traer todos los cambios que tiene el repositorio remoto de una rama y los fusiona automáticamente con tu rama local actual. Es recomendable usarlo especificando el origen y la rama para evitar problemas:
+
+```bash
+git pull origin rama
+```
+
+### 4. ¿Qué es `git push`?
+Es el comando que sube (empuja) tus cambios locales al repositorio remoto. Al igual que el pull, se recomienda ser explícito con la rama:
+
+```bash
+git push origin rama
+```
+
+> 💡 **Nota sobre el flag `-u` (upstream):** La primera vez que subes una rama nueva que no existe en el repositorio remoto, debes usar el flag `-u`. Esto establece una conexión directa y le dice a Git adónde debe enviar futuros cambios por defecto.
+> ```bash
+> git push -u origin rama
+> ```
+
+### 5. Flujo de Trabajo (Sin Pull Requests)
+A continuación se detalla un ciclo de trabajo típico al colaborar en equipo integrando cambios directamente en la rama de desarrollo, sin utilizar interfaces web (como los Pull Requests de GitHub):
+
+```bash
+# 1. Posicionarse y actualizar la rama base
+git checkout develop
+git fetch
+git pull origin develop
+
+# 2. Ir a la rama de trabajo
+git checkout rama
+
+# 3. Traer actualizaciones de develop a tu rama (solo si hubo cambios)
+git merge develop 
+
+# --- AQUI TRABAJAS EN TU RAMA (add, commit, etc.) ---
+
+# 4. Subir tus cambios (usa -u si es la primera vez)
+git push origin rama 
+
+# 5. Volver a develop para la integración final
+git checkout develop
+git fetch
+git pull origin develop
+
+# 6. Fusionar tu rama asegurando el historial (no fast-forward)
+git merge --no-ff rama
+
+# 7. Resolver manualmente los archivos fallidos y sus conflictos (si los hay)
+git add .
+git commit
+# (Guardar y cerrar en el editor, ej: Ctrl+O, Enter, Ctrl+X si usas nano)
+
+# 8. Limpieza y subida final
+git branch -D rama          # Borras la rama local
+git push origin develop     # Subes los cambios integrados al remoto
+```
