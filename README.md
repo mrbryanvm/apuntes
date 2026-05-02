@@ -7,7 +7,7 @@
 
 ## 📚 Clase 1: Introducción y Fundamentos de Git
 
-En esta primera sesión se cubrieron los conceptos básicos de Git, su origen histórico y la configuración inicial del entorno de trabajo.
+En esta primera sesión cubrimos los conceptos básicos de Git, su origen histórico y la configuración inicial del entorno de trabajo.
 
 ### 1. ¿Qué es Git?
 
@@ -169,7 +169,7 @@ git push -u origin main
 
 ### 1. git remote: El Arquero de Git
 
-Piensa en `git remote` como un arquero. Tu código está en tu computadora (el arco), pero necesitas decirle a Git hacia dónde debe disparar la flecha (la nube/GitHub).
+Pensamos en `git remote` como un arquero. Nuestro código está en la computadora (el arco), pero necesitamos decirle a Git hacia dónde debe disparar la flecha (la nube/GitHub).
 
 **¿Qué es el "Origin"?**
 Cuando usas el comando `git remote add origin <URL>`, le estás diciendo a Git: "Oye, esta URL larguísima de GitHub a partir de ahora se va a llamar origin". Es solo un apodo (alias) para no tener que escribir el link completo cada vez que subes código.
