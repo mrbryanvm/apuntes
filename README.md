@@ -426,9 +426,3 @@ Si dos personas tocan el mismo archivo (ej. `README.md`) y el PR #4 se acepta pr
 
 > 💡 **Buena práctica:** Una vez que tu PR ha sido aceptado y mergeado en la web, dale al botón "Delete branch" en GitHub para mantener el repositorio limpio.
 
-### 3. 🚀 Entregas Finales (Deadlines)
-
-- **Individual (Apuntes + README personal):** Mañana viernes a las 21:30. Se revisará el link que pusiste en la lista oficial.
-- **Grupal (Proyecto):** Sábado a las 21:00.
-
-> ⚠️ **Regla de Oro:** No se tomarán en cuenta commits realizados después de las horas señaladas.
