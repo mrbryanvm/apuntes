@@ -20,7 +20,7 @@ Su función principal es crear "puntos de guardado" (checkpoints) de los archivo
 
 <!-- ESPACIO PARA IMAGEN 1: Te sugiero poner aquí un diagrama de cómo funciona un sistema distribuido o el logo oficial de Git -->
 <div align="center">
-  <img src="https://www.20i.com/blog/wp-content/uploads/2022/08/git-blog-header.png" alt="Diagrama de Git o Logo" width="500">
+  <img src="images/git-logo.png" alt="Diagrama de Git o Logo" width="500">
   <br>
   <em><small>Logo de git</small></em>
 </div>
@@ -57,7 +57,7 @@ Para entender cómo trabaja Git, es fundamental conocer el flujo de los archivos
 
 <!-- ESPACIO PARA IMAGEN 2: Aquí es ideal colocar un diagrama visual de los tres estados de Git (Working Directory -> Staging Area -> Local Repo) -->
 <div align="center">
-  <img src="https://miro.medium.com/1*diRLm1S5hkVoh5qeArND0Q@2x.png" alt="Flujo de los Tres Estados de Git" width="600">
+  <img src="images/git-flow.png" alt="Flujo de los Tres Estados de Git" width="600">
   <br>
   <em><small>git flow</small></em>
 </div>
@@ -119,7 +119,7 @@ Para que el historial sea fácilmente legible, usamos el formato `<tipo>: <descr
 
 <!-- ESPACIO PARA IMAGEN 3: Una captura de pantalla de un historial de commits limpios (usando git log o una interfaz gráfica como GitKraken/GitHub) mostrando commits semánticos -->
 <div align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:1400/1*izVKF4AT1iDtv4fJO8oWWA.png" alt="Ejemplo de Commits Semánticos en el Historial" width="600">
+  <img src="images/git-log.png" alt="Ejemplo de Commits Semánticos en el Historial" width="600">
   <br>
   <em><small>Git log</small></em>
 </div>
@@ -143,7 +143,7 @@ Es el error más común de los novatos. Aquí la diferencia clara:
 Configurar SSH es vital para no tener que escribir tu usuario y contraseña cada vez que quieras subir cambios (`git push`).
 
 <div align="center">
-  <img src="https://i.ytimg.com/vi/iVJesFfzDGs/maxresdefault.jpg" alt="Configuración SSH GitHub" width="600">
+  <img src="images/git-ssh.jpg" alt="Configuración SSH GitHub" width="600">
   <br>
   <em><small>Configuración SSH GitHub</small></em>
 </div>
@@ -233,6 +233,13 @@ No te asustes con este término. "HEAD" es simplemente hacia dónde está mirand
 
 ## 🌿 Clase 5: Ramas (Branches) y Flujo de Trabajo
 
+> ⚠️ **Nota de Ausencia:** No pude asistir a esta clase debido a que tenía una reunión para mi entrega de la materia de TIS (Taller de Ingeniería de Software) programada para el día siguiente, y además, un examen en la mañana de QA (Gestión de Calidad de Software) para el cual debía estudiar. Adjunto constancias:
+> 
+> <div align="center">
+>   <img src="images/git-clase5-permiso.jpeg" alt="Entrega TIS" width="400">
+>   <img src="images/git-clase5-permiso.png" alt="Examen QA" width="400">
+> </div>
+
 ### 1. El Tema Central: RAMAS (Branches)
 Las ramas son bifurcaciones del estado del código. Imagina que creas un camino paralelo para trabajar sin arruinar lo que ya funciona.
 
@@ -273,6 +280,12 @@ Para que tus amigos no solo miren tu código sino que también metan mano:
 ---
 
 ## 🔀 Clase 6: Fusión y Sincronización (Merge, Fetch, Pull, Push)
+
+> ⚠️ **Nota de Ausencia:** No pude asistir a esta clase porque tenía mi defensa de TIS con la Licenciada Leticia Blanco a esa misma hora. Adjunto constancia:
+>
+> <div align="center">
+>   <img src="images/git-clase6-permiso.png" alt="Defensa TIS" width="500">
+> </div>
 
 En esta sesión abordamos los comandos fundamentales para sincronizar nuestro repositorio local con el remoto y cómo integrar los cambios de diferentes ramas.
 
