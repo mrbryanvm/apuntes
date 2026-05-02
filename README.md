@@ -385,3 +385,50 @@ Bien, ya sabemos la importancia de los PRs pero aun así, no hemos limitado nada
 ### 6. ¿Cómo colaboro al proyecto si no soy un colaborador invitado?
 En la clase nuestro querido postulante Andre colaboró sin estar invitado en nuestro repositorio sin estar invitado, esto es posible y nos lo explica él mismo en el siguiente video:
 [En progreso]
+
+---
+
+## 🛠️ Clase 8: Comandos de Utilidad, Conflictos y Entregas Finales
+
+### 1. Comandos de Utilidad (Lo nuevo)
+
+#### Git Stash (El "Almacén Temporal")
+Sirve para guardar cambios que no quieres commitear todavía pero necesitas "limpiar" tu área de trabajo para cambiar de rama.
+
+- `git stash save "mensaje"` o `git stash`: Guarda tus cambios actuales en una pila.
+- `git stash list`: Muestra la lista de todos los cambios guardados.
+- `git stash pop`: Recupera el último cambio guardado y lo elimina de la lista.
+
+#### Git Diff (Diferencias)
+Para ver exactamente qué líneas cambiaste antes de hacer commit.
+
+- `git diff`: Cambios en archivos que no has pasado al área de preparación (staged).
+- `git diff --staged`: Cambios en archivos que ya están en el área de preparación.
+- `git diff rama1 rama2`: Compara las diferencias totales entre dos ramas.
+
+#### Commits Largos
+Recuerda que para cambios complejos es mejor usar un título y una descripción detallada:
+```bash
+git commit -m "Título corto" -m "Descripción detallada de todos los cambios realizados"
+```
+
+### 2. ⚔️ Resolución de Conflictos y Pull Requests (PR)
+
+**El problema de los PRs paralelos:**
+Si dos personas tocan el mismo archivo (ej. `README.md`) y el PR #4 se acepta primero, el PR #5 automáticamente mostrará un "Merge Conflict". GitHub no te dejará mergear hasta que resuelvas el conflicto localmente.
+
+**Pasos para resolverlo:**
+
+1. Vuelve a tu rama local.
+2. Haz un `git pull origin develop` para traer los cambios aceptados del otro PR.
+3. Usa el Merge Editor de Visual Studio Code para elegir qué código se queda (Incoming, Current o ambos).
+4. Haz commit de la resolución y sube los cambios (`git push`). El PR en GitHub se actualizará solo y te permitirá mergear.
+
+> 💡 **Buena práctica:** Una vez que tu PR ha sido aceptado y mergeado en la web, dale al botón "Delete branch" en GitHub para mantener el repositorio limpio.
+
+### 3. 🚀 Entregas Finales (Deadlines)
+
+- **Individual (Apuntes + README personal):** Mañana viernes a las 21:30. Se revisará el link que pusiste en la lista oficial.
+- **Grupal (Proyecto):** Sábado a las 21:00.
+
+> ⚠️ **Regla de Oro:** No se tomarán en cuenta commits realizados después de las horas señaladas.
